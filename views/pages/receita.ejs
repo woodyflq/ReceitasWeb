@@ -1,0 +1,54 @@
+<html lang="en" class="h-100">
+  <head>
+    
+    <%- include('../partials/head') %>
+
+  </head>
+
+  <body class="d-flex flex-column h-100">
+
+    <%- include('../partials/header') %>
+
+
+
+    <main class="flex-shrink-0">
+      <div class="container mt-5">
+
+        <form action="/addReceita" method="post" enctype="">
+          <div class="mb-3">
+
+            <label  for="text" class="form-label">Nome da Receita</label>
+            <input id="nome" type="text" name="nome" class="form-control" id="receitaName" aria-describedby="text">
+
+          </div>
+          <div class="mb-3">
+
+            <label for="text" class="form-label">Ingredientes</label>
+            <input id="ingredientes" type="text" name="ingredientes" class="form-control" id="receitaIngrediente">
+
+          </div>
+          <div class="mb-3">
+
+            <label for="text" class="form-label">Modo de preparo</label>
+            <input id="preparo" type="text" name="preparo" class="form-control" id="receitePreparo" aria-describedby="text">
+
+          </div>
+          <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+      </div>
+    </main>
+
+
+    <%- include('../partials/scripts') %>
+
+    <script
+src="/static/js/Receita.js"
+></script>
+
+<script
+src="/static/js/ReceitaRepository.js"
+></script>
+    
+  </body>
+</html>

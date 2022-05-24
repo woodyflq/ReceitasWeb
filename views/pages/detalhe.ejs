@@ -1,0 +1,71 @@
+<html lang="en" class="h-100">
+  <head>
+
+    <%- include('../partials/head') %>
+
+  </head>
+  
+  <body class="d-flex flex-column h-100">
+
+    <%- include('../partials/header') %>
+
+
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+
+   
+
+      <div class="container mt-5">
+
+        <ul class="mt-5">
+
+      <% if (lista) { %>
+
+        <%let nome = ""%>
+        <%let ingredientes = ""%>
+        <%let preparo = ""%>
+        
+        <% for (let i = 0; i <= id; i++) { %>
+
+
+        <%nome = lista[i].nome%>
+        <%ingredientes = lista[i].ingredientes%>
+        <%preparo = lista[i].preparo%>
+
+        <% } %>
+
+        <h1>Nome: <%= nome%> </h1>
+        <p>Ingredientes: <%= ingredientes %></p>
+        <p>Preparo: <%= preparo%></p>
+
+
+
+      <% }  %>
+      
+      </ul
+  
+
+  </div>
+
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+
+    <form action="/delete/<%=id%>" method="post" enctype="">
+      <button class="btn btn-primary me-md-2" type="submit">Delete</button>
+    </form>
+
+    <form action="/update/<%=id%>" method="post" enctype="">
+      <button class="btn btn-primary me-md-2" type="submit">Update</button>
+    </form>
+  </div>
+
+    </main>
+
+
+
+
+
+    <%- include('../partials/scripts') %>
+
+
+  </body>
+</html>

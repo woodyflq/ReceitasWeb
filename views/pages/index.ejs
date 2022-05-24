@@ -1,0 +1,50 @@
+<html lang="en" class="h-100">
+  <head>
+
+    <%- include('../partials/head') %>
+
+  </head>
+  
+  <body class="d-flex flex-column h-100">
+
+    <%- include('../partials/header') %>
+
+
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+
+
+      <div class="container mt-5">
+        <ul>
+
+      <% if (lista) { %>
+        
+        <% for (let i = 0; i < lista.length; i++) { %>
+
+          
+            <a href="/detalhe/<%= lista[i].id %>" class="list-group-item list-group-item-action">
+                Receita: <%= lista[i].id + 1%> 
+                <br>
+                Nome: <%= lista[i].nome %> 
+            </a>
+          
+
+        <% } %>
+
+      <% }  %>
+
+    </ul>
+      
+  </div>
+
+    </main>
+
+
+
+
+
+    <%- include('../partials/scripts') %>
+
+
+  </body>
+</html>
