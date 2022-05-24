@@ -14,6 +14,6 @@ EJS.
 
 * O objeto Receita se encotra na clase Receita.js
 
-* A clase ReceitaRepository implementa os metodos "inserir", "delete" e "update" já os meotodos "pesquisarReceita" e "pesquisarTodasReceitas" foram implementados no arquivo index.ejs e detalhe.ejs
+* A clase ReceitaRepository implementa os metodos "inserir", "delete" e "update" já os métodos "pesquisarReceita" e "pesquisarTodasReceitas" foram implementados no arquivo index.ejs e detalhe.ejs
 
 * O arquivo index.js possui todas a rotas e especificações do back-end da Aplicação
